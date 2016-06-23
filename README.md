@@ -8,6 +8,64 @@ summaries of things I learned relating to math, programming, and similar topics.
 
 ## Recent #
 
+### Mocha & Chai Testing in Javascript #
+
+*2016 Jun 23*
+
+Unit testing is something I want to learn now. I decided to just look up how to 
+do it and applied it to my new NodeJS workspace for Project Euler.
+
+**Required Installs**
+
+```bash
+npm install mocha -g
+npm install chai
+```
+
+**A Test File**
+
+```javascript
+/**
+ * Tests the logic of the Project Euler solutions in order to ensure that
+ * the module library is still functioning.
+ * @file tests/problem-example-tests.js
+ */
+ 
+ // import the chai module and the expect object from it
+var chai = require ( 'chai' );
+var expect = chai.expect;
+// import the module to test
+var E0101 = require ( '../problems/0101-0150/euler0101' );
+
+// create a test group
+describe( 'EulerTestCases', function() {
+    // this is a single test
+    it ( 'answer to Problem #101 test case should be 74', function() {
+        // I expect a call to E0101.test() to return 74
+        expect( E0101.test () ).to.equal ( 74 );
+    });
+});
+```
+
+**The Mocha Command**
+
+From the root of the project (it searches for tests recursively):
+
+```bash
+mocha tests --recursive
+```
+
+**Output**
+
+```
+  EulerTestCases
+
+    ✓ answer to Problem #101 test case should be 74
+
+
+  1 passing (14ms)
+```
+
 ### Python Dictionary Comprehensions #
 
 *2016 Jun 14*
