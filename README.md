@@ -8,11 +8,28 @@ summaries of things I learned relating to math, programming, and similar topics.
 
 ## Recent #
 
+### Git Push and Git Pull #
+
+*2016 Jul 19*
+
+I recently got a new computer and I started doing more of my projects on its hard drive instead of working almost exclusively on Cloud9. I use GitHub to transfer code from one place to another, even on the projects that I am working alone.
+
+I learned the hard way that its annoying to resolve conflicts if you are using only one git branch and not properly pushing and pulling. I spent some time working on an Angular project on my computer, and then spent some time on the road in my laptop working via Cloud9 (on a different part of the project). I pushed updates from my laptop, which later caused annoyances when I tried to push different updates from my computer (I had made conflicting edits to a few of the same files).
+
+**The Takeaway**
+
+If you're doing anything like this, follow this rule:
+
+1. Before starting a new session of work, do a `git pull`.
+1. At the end of a session of work, do a `git push`.
+
+This will keep no small amount of aggravation at bay.
+
 ### Mocha & Chai Testing in Javascript #
 
 *2016 Jun 23*
 
-Unit testing is something I want to learn now. I decided to just look up how to 
+Unit testing is something I want to learn now. I decided to just look up how to
 do it and applied it to my new NodeJS workspace for Project Euler.
 
 **Required Installs**
@@ -30,7 +47,7 @@ npm install chai
  * the module library is still functioning.
  * @file tests/problem-example-tests.js
  */
- 
+
  // import the chai module and the expect object from it
 var chai = require ( 'chai' );
 var expect = chai.expect;
