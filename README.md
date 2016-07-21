@@ -8,6 +8,22 @@ summaries of things I learned relating to math, programming, and similar topics.
 
 ## Recent #
 
+### Agnostic Line Split in Javascript #
+
+*2016 Jul 21*
+
+I've found a need to split a string (read from text file) into a list where each string in the list is the content of a single line. This is normally easy to accomplish:
+
+```javascript
+fileText.split ( '\n' );
+```
+
+But the above snippet assumes normal Unix file endings. Sometimes files don't end with '\n', but with '\r\n' instead. The `string.split()` method can take a regular expression instead of a string, and the following command will split the string properly regardless of which type of line ending is present:
+
+```javascript
+fileText.split ( /\r?\n/ );
+```
+
 ### Git Push and Git Pull #
 
 *2016 Jul 19*
